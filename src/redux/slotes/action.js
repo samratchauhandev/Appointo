@@ -36,7 +36,7 @@ export const featchSlotsFailuer = (error) => {
 
 export const fetchSlots = () =>{
     return (dispatch)=>{
-        dispatch(featchSlotsRequest)
+        dispatch(featchSlotsRequest())
         axios.get(timeslotsurl)
         .then(responce => {
             const slots = responce.data

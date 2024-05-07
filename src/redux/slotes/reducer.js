@@ -22,13 +22,14 @@ const reducer = (state = initialState, action) => {
 
         case FETCH_SLOTS_SUCCESS:
             return {
+                ...state,
                 slots: action.payload,
-                error: ''
+                loading: false,
             }
 
         case FETCH_SLOTS_FAILUER:
             return {
-                slots: [],
+                ...state,
                 error: action.payload
             }
         default:
