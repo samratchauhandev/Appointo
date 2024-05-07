@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* Define scrollbar width, round edges, and left margin */
+  ::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 10px; /* Left margin */
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 10px; /* Round edges */
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .header {
+    flex: 0 1 0%;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px #60617029;
+  }
+  .home {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(240, 240, 240, 0.7);
+    position: relative;
+    .footer_svg {
+      position: absolute;
+      bottom: -37px;
+      left: -25px;
+    }
+    .right_bg_svg {
+      position: absolute;
+      right: -32px;
+      bottom: 226.48px;
+    }
+  }
+}
+
+.navigation_bar {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  .share_button {
+    display: flex;
+    align-items: center;
+    padding: 8px 20px;
+    border: 1px solid #378760;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #378760;
+    .share_text {
+      margin-left: 8px;
+    }
+  }
+  .nav_btn {
+    font-size: 18px;
+    font-weight: 500;
+    &.selector_box {
+      outline: none;
+      border: none;
+      background: none;
+    }
+  }
+}
+
+.logo_container {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  .branding {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .company_title {
+      font-size: 24px;
+      color: rgba(67, 67, 199, 0.384);
+    }
+    .company_description {
+      font-size: 18px;
+      color: rgb(23, 228, 255);
+    }
+  }
+}
+
+.appointment_container {
+  height: 572px;
+  width: 928px;
+  display: flex;
+  flex-direction: column;
+  .appintment_main {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    .calender_container {
+      flex: 1;
+      height: 100%;
+      //   background: rgba(235, 235, 240, 1);
+      background: #ebebf0;
+      border-radius: 8px 0 0 0;
+    }
+    .slot_container {
+      flex: 1;
+      height: 100%;
+      border-radius: 0 8px 0 0;
+      background: #fff;
+    }
+  }
+  .footer {
+    flex: 0 1 0%;
+    padding: 28.5px 30px;
+    background: #378760;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    .powered_by_title {
+      font-size: 12px;
+      color: #fff;
+    }
+    .fotter_button {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      padding: 13.5px 30px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      background: "#FFFFFF";
+      color: rgba(85, 87, 112, 1);
+    }
+  }
+}
+
+.react-calendar__navigation__next2-button {
+  display: none;
+}
+.react-calendar__navigation__prev2-button {
+  display: none;
+}
+
+.slots_main_container {
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(85, 87, 112, 1);
+  .time_container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 20px 40px;
+  }
+  .custom_selector_container {
+    position: relative;
+    .time_option {
+      margin-top: 6px;
+      width: 100%;
+      height: 48px;
+      font-weight: 600;
+      border: 1px solid rgba(199, 201, 217, 1);
+      border-radius: 10px;
+      font-size: 14px;
+      color: #378760;
+      background: #fafafc;
+      outline: none;
+      padding: 14px;
+      appearance: none;
+    }
+    .chevron {
+      position: absolute;
+      top: 40%;
+      right: 15px;
+      transform: rotate(90deg);
+    }
+  }
+  .slots_avaliable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px 0 40px;
+    height: 237px;
+    overflow-y: scroll;
+  }
+  .slot_title {
+    margin-bottom: 6px;
+    padding: 0 40px;
+  }
+  .slots_avaliable_timing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 48px;
+    border: 1px solid #378760;
+    background: rgba(250, 250, 252, 1);
+    border-radius: 10px;
+    font-size: 16px;
+    color: rgba(55, 135, 96, 1);
+  }
+}
+.calendar_container {
+  padding: 20px 40px 40px 40px;
+  .react-calendar {
+    width: 100%;
+  }
+}
+.calendar_header {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 40px 40px 0 40px;
+  .calendar_timezone {
+    font-size: 14px;
+    color: #555770;
+    .calendar_region {
+      font-weight: 400;
+    }
+  }
+}
+
+.react-calendar {
+  border-radius: 8px;
+  border: 1px solid #c7c9d9 !important;
+  padding: 10px;
+  height: 342.1px;
+  .react-calendar__month-view__weekdays {
+    color: #378760;
+    abbr {
+      text-decoration: none;
+    }
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .react-calendar__navigation__label__labelText {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+.react-calendar__tile--now {
+  background: #378760 !important;
+  color: #fff;
+  border-radius: 99px;
+  gap: 10px;
+}
+
+.react-calendar__tile {
+  &.react-calendar__tile--active {
+    background: #378760 !important;
+    color: #fff;
+    border-radius: 99px;
+  }
+}
+
+.react-calendar__tile {
+  &.react-calendar__month-view__days__day {
+    &.react-calendar__month-view__days__day--weekend {
+      color: #333333;
+    }
+  }
+}
